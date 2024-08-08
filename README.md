@@ -6,15 +6,20 @@
 
 MODA (Multimodal Object Description Assistant) is an AI model that describes fashion items by combining visual and textual data. Vision Language Models (VLMs) like MODA integrate visual and linguistic information to enhance understanding and generation of descriptive text for images. MODA is built using FashionCLIP [1], a model that combines the capabilities of CLIP (Contrastive Language-Image Pre-training) [2] with fashion-specific datasets, and OPT (Open Pre-trained Transformers) [3] from Meta, which is a large language model. By leveraging these technologies, MODA provides detailed and accurate descriptions of various fashion objects.
 
-## Related Work
+## Vision-Language Models (VLMs)
 
 Vision-Language Models (VLMs) have significantly advanced by integrating visual and textual data, leveraging pretrained backbones to reduce training costs while maintaining high performance. Models like LLaVA[4] and PaLI[5] exemplify this trend. LLaVA uses CLIP and Vicuna to handle diverse tasks such as visual question answering and image captioning with efficient resource utilization and reinforcement learning from human feedback [4]. PaLI supports over 100 languages by combining large ViT models and mT5 text models, trained on the extensive WebLI dataset, demonstrating robust multilingual capabilities [5]. PaliGemma, inspired by PaLI-3, integrates the SigLIP vision model and the Gemma language model, focusing on multimodal pretraining and high-resolution tasks to balance performance and efficiency [6]. Leveraging pretrained backbones, models like Frozen and MiniGPT-4 efficiently align visual features with text token embeddings, reducing computational requirements and enhancing versatility [7][8].
 
-Although these models are highly efficient, their large number of parameters often prevents their use in low-compute environments or for tasks that can be achieved with fewer parameters. This highlights the need for smaller models tailored to specific tasks, which can still perform well without requiring extensive computational resources. MODA (Multimodal Object Description Assistant) addresses this need by being a specialized, task-specific VLM designed for fashion item descriptions. Combining FashionCLIP [1] for image encoding and OPT-125M [3] for text generation, MODA is tailored for accuracy in its domain while maintaining a lightweight architecture with only 280 million parameters. This small size allows MODA to run efficiently, even without a GPU, making it highly accessible for specific applications where resource constraints are a consideration. This specialization underscores MODA's advantage in delivering detailed and accurate fashion descriptions with minimal computational overhead.
-## Architecture
 
 <p align="center">
-  <img width="700" alt="logo_dark_stacked_KzUurne (1)" src="https://github.com/user-attachments/assets/4010d574-1a82-4594-82b9-5071e0459daa">
+  <img width="700" alt="VLMs" src="https://github.com/user-attachments/assets/07788713-90e6-4d7b-b083-415502745688">
+</p> 
+
+Although these models are highly efficient, their large number of parameters often prevents their use in low-compute environments or for tasks that can be achieved with fewer parameters. This highlights the need for smaller models tailored to specific tasks, which can still perform well without requiring extensive computational resources. MODA (Multimodal Object Description Assistant) addresses this need by being a specialized, task-specific VLM designed for fashion item descriptions. Combining FashionCLIP [1] for image encoding and OPT-125M [3] for text generation, MODA is tailored for accuracy in its domain while maintaining a lightweight architecture with only 280 million parameters. This small size allows MODA to run efficiently, even without a GPU, making it highly accessible for specific applications where resource constraints are a consideration. This specialization underscores MODA's advantage in delivering detailed and accurate fashion descriptions with minimal computational overhead.
+## MODA Architecture
+
+<p align="center">
+  <img width="700" alt="Architecture" src="https://github.com/user-attachments/assets/4010d574-1a82-4594-82b9-5071e0459daa">
 </p> 
 
 ## Training
